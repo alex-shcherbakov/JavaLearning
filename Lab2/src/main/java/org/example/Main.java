@@ -15,9 +15,12 @@ public class Main {
         order.setStatus("Shipped");
 
         String orderStatus = order.getStatus();
-        System.out.println("Order status: " + orderStatus);
+        int OrderId = order.getOrderId();
+        System.out.println("Order status: " + orderStatus +"OrderId:" +OrderId);
         String prod = product1.getName();
         System.out.println("Info about product: " + prod);
+
+        cart.clearCart();
 
     }
 }
