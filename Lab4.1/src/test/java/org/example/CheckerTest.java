@@ -24,7 +24,7 @@ class CheckerTest {
     }
 
     @Test
-    public void testIsPalindromeWithEmptyString() {
+    public void testIsPalindromeEmptyString() {
         assertTrue(checker.isPalindrome(""));
     }
 
