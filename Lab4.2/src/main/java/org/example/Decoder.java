@@ -17,9 +17,6 @@ public class Decoder {
         for (char c : input.toCharArray()) {
             if (Character.isLetter(c)) {
                 char decodedChar = (char) (c - 1);
-                if (decodedChar == '`') {
-                    decodedChar = 'z';
-                }
                 decoded.append(decodedChar);
             } else {
                 decoded.append(c);
