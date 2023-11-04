@@ -10,16 +10,25 @@ public class Bank {
         accounts.put(accountNumber, account);
         return account;
     }
-    public BankAccount findAccount(int accountNumber){
+    public BankAccount findAccount(int accountNumber) throws AccountNotFoundException {
         BankAccount account = accounts.get(accountNumber);
+
+        if (account == null) {
+            throw new AccountNotFoundException(
+                    "Account №" + accountNumber + " wasn't found");
+        }
+
         return account;
     }
-    public void transferMoney(int fromAccountNumber, int toAccountNumber, double amount){
+
+
+    public void transferMoney(int fromAccountNumber, int toAccountNumber, double amount)
+            throws AccountNotFoundException, InsufficientFundsException, NegativeAmountException {
         BankAccount from = findAccount(fromAccountNumber);
         BankAccount to = findAccount(toAccountNumber);
 
         from.withdraw(amount);
         to.deposit(amount);
-
     }
+}
 }

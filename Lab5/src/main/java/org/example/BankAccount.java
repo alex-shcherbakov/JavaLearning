@@ -21,11 +21,21 @@ public class BankAccount {
 
     public void deposit(double amount){
         if(amount > 0) Balance += amount;
-
+        else if (amount <= 0) {
+            throw new NegativeAmountException(
+                    "You can't add this number");
+        }
     }
     public void withdraw(double amount){
         if(amount > 0) Balance -= amount;
-
+        else if (amount < 0) {
+            throw new NegativeAmountException(
+                    "Сума не може бути від'ємною");
+        }
+        else if (amount > balance) {
+            throw new InsufficientFundsException(
+                    "Недостатньо коштів на рахунку");
+        }
     }
 
 
