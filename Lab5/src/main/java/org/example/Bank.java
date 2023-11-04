@@ -23,12 +23,16 @@ public class Bank {
 
 
     public void transferMoney(int fromAccountNumber, int toAccountNumber, double amount)
-            throws AccountNotFoundException, InsufficientFundsException, NegativeAmountException {
-        BankAccount from = findAccount(fromAccountNumber);
-        BankAccount to = findAccount(toAccountNumber);
+            throws AccountNotFoundException, NegativeAmountException, InsufficientFundsException {
+        BankAccount fromAccount = findAccount(fromAccountNumber);
+        BankAccount toAccount = findAccount(toAccountNumber);
 
-        from.withdraw(amount);
-        to.deposit(amount);
+        try {
+            fromAccount.withdraw(amount);
+            toAccount.deposit(amount);
+        } finally {
+            System.out.println("Transfer completed");
+        }
     }
 }
-}
+

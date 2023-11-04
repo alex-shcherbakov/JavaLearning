@@ -15,28 +15,29 @@ public class BankAccount {
         return Balance;
     }
     public String getAccountSummary(){
-        return "Назва аккаунту: " + accountName +"/n" + "Номер аккаунту: " + accountNumber +"/n"
-                + "Баланс аккаунту: " + Balance;
+        return "Account's name: " + accountName +"\n" + "Account's number: " + accountNumber +"\n"
+                + "Account's balance: " + Balance;
     }
 
-    public void deposit(double amount){
+    public void deposit(double amount) throws NegativeAmountException {
         if(amount > 0) Balance += amount;
         else if (amount <= 0) {
             throw new NegativeAmountException(
                     "You can't add this number");
         }
     }
-    public void withdraw(double amount){
-        if(amount > 0) Balance -= amount;
-        else if (amount < 0) {
-            throw new NegativeAmountException(
-                    "Сума не може бути від'ємною");
+    public void withdraw(double amount) throws InsufficientFundsException, NegativeAmountException {
+        if (amount < 0) {
+            throw new NegativeAmountException("Cannot withdraw a negative amount.");
         }
-        else if (amount > balance) {
-            throw new InsufficientFundsException(
-                    "Недостатньо коштів на рахунку");
+        if (amount > Balance) {
+            throw new InsufficientFundsException("Insufficient funds for withdrawal.");
         }
+        Balance -= amount;
     }
 
+    public int getAccountNumber() {
+        return accountNumber;
+    }
 
 }
