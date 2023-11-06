@@ -36,20 +36,22 @@ public class CinemaHall {
 
     public boolean checkAvailability(int hallNumber, int numSeats) {
         for (int row = 0; row < numRows; row++) {
-            int consecutiveSeats = 0;
-            for (int seat = 0; seat < numSeatsPerRow; seat++) {
-                if (Halls[hallNumber][row][seat] == 0) {
-                    consecutiveSeats++;
-                    if (consecutiveSeats == numSeats) {
-                        return true;
+            for (int seat = 0; seat < numSeatsPerRow - numSeats + 1; seat++) {
+                boolean available = true;
+                for (int i = 0; i < numSeats; i++) {
+                    if (Halls[hallNumber][row][seat + i] == 1) {
+                        available = false;
+                        break;
                     }
-                } else {
-                    consecutiveSeats = 0;
+                }
+                if (available) {
+                    return true;
                 }
             }
         }
         return false;
     }
+
 
     public void printSeatingArrangement(int hallNumber) {
         System.out.println("Seating arrangement for hall " + hallNumber + ":");

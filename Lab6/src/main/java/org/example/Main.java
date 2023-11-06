@@ -73,5 +73,5 @@ public class Main {
                     System.out.println("Невірний вибір. Спробуйте ще раз.");
             }
         }
-        }
     }
+}
