@@ -1,8 +1,14 @@
 package org.example;
 
 public class AccountNotFoundException extends Exception{
-    public AccountNotFoundException(String errorMessage){
-        super(errorMessage);
+    private string accountName;
+    public AccountNotFoundException(String accountName){
+        this.accountName = accountName;
+        super("This account wasn't found." +
+                "probable name" + accountName +" doesn't exist");
     }
 
+    public string getAccountName() {
+        return this.accountName;
+    }
 }

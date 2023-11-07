@@ -1,7 +1,15 @@
 package org.example;
 
 public class NegativeAmountException extends Exception{
-    public NegativeAmountException(String errorMessage){
-        super(errorMessage);
+    private double amount;
+    public NegativeAmountException(double amount){
+        this.amount = amount;
+        super("Opertion failed." +
+                "you can't deposit negative sum");
+
+    }
+
+    public double getAmount(){
+        return this.amount;
     }
 }

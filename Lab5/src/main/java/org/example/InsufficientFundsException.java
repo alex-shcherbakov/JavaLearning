@@ -1,5 +1,4 @@
 package org.example;
-// lombox
 public class InsufficientFundsException extends Exception {
     private double withdrwedAmount;
     private double balance;
