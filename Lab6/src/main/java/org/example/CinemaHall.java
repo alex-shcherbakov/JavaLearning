@@ -1,9 +1,9 @@
 package org.example;
 
 public class CinemaHall {
-    private int[][][] Halls;
-    private int numRows;
-    private int numSeatsPerRow;
+    public int[][][] Halls;
+    public int numRows;
+    public int numSeatsPerRow;
 
     public CinemaHall(int numHalls, int numRows, int numSeatsPerRow) {
         this.numRows = numRows;
@@ -21,7 +21,7 @@ public class CinemaHall {
                 throw new InvalidBookingException(row);
             } else {
                 Halls[hallNumber][row - 1][seat - 1] = 1;
-                System.out.println("Місце " + seat + " в ряді " + row + " залу №" + hallNumber + " успішно заброньоване.");
+                System.out.println("Seat " + seat + " in a row " + row + " of a hall№" + hallNumber + " has been booked.");
             }
         }
     }
