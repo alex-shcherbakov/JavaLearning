@@ -21,16 +21,15 @@ public class BankAccount {
     }
 
     public void deposit(double amount) throws NegativeAmountException {
-        if (amount > 0) {
-            balance += amount;
-        } else {
-            throw new NegativeAmountException("You can't add this amount");
+        if (amount < 0) {
+            throw new NegativeAmountException(amount);
         }
+        balance += amount;
     }
 
     public void withdraw(double amount) throws InsufficientFundsException, NegativeAmountException {
         if (amount < 0) {
-            throw new NegativeAmountException("Cannot withdraw a negative amount.");
+            throw new NegativeAmountException(amount);
         }
         if (amount > balance) {
             throw new InsufficientFundsException(amount, balance);

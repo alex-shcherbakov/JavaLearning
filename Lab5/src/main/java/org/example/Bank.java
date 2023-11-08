@@ -2,7 +2,7 @@ package org.example;
 import java.util.HashMap;
 
 public class Bank {
-    private HashMap<Integer, BankAccount> accounts = new HashMap<>();
+    public HashMap<Integer, BankAccount> accounts = new HashMap<>();
 
     public BankAccount createAccount(String accountName, double initialDeposit) {
         int accountNumber = accounts.size() + 1;
@@ -36,4 +36,5 @@ public class Bank {
         }
     }
 }
+
 
