@@ -7,19 +7,33 @@
 
 Хід розробки : 
 Згідно з наступними етапами розробки:
+
 Реалізуйте клас BankAccount з членами класу accountNumber, accountName і balance.
+
 Реалізуйте методи deposit(double amount), withdraw(double amount), getBalance() та getAccountSummary().
+
 Створіть спеціалізовані класи винятків:
+
 InsufficientFundsException
+
 NegativeAmountException
+
 AccountNotFoundException
+
 Реалізуйте клас Bank, який зберігає колекцію об'єктів BankAccount.
+
 У класі Bank, реалізуйте методи:
+
 createAccount(String accountName, double initialDeposit)
+
 findAccount(int accountNumber)
+
 transferMoney(int fromAccountNumber, int toAccountNumber, double amount)
+
 Обробляйте винятки відповідно в кожному методі.
+
 Створіть тестові класи, де ви моделюєте різні сценарії для тестування обробки виняткових ситуацій.
+
 
 Була створена модель програми:
 ![img.png](img.png)
