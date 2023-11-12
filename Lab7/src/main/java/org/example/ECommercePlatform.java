@@ -50,12 +50,10 @@ public class ECommercePlatform {
         }
     }
 
-
-
     public void displayProductsSortedByName() {
         List<Product> sortedProducts = new ArrayList<>(products.values());
         Collections.sort(sortedProducts, Comparator.comparing(Product::getName));
-        System.out.println("Список товарів, відсортованих за назвою:");
+        System.out.println("List of products sorted by name:");
         for (Product product : sortedProducts) {
             System.out.println(product);
         }
@@ -63,7 +61,7 @@ public class ECommercePlatform {
     public void displayProductsSortedByPrice() {
         List<Product> sortedProducts = new ArrayList<>(products.values());
         Collections.sort(sortedProducts);
-        System.out.println("Список товарів, відсортованих за ціною:");
+        System.out.println("List of products sorted by price:");
         for (Product product : sortedProducts) {
             System.out.println(product);
         }
@@ -71,13 +69,13 @@ public class ECommercePlatform {
     public void displayProductsSortedByStock() {
         List<Product> sortedProducts = new ArrayList<>(products.values());
         Collections.sort(sortedProducts, Comparator.comparingInt(Product::getStock));
-        System.out.println("Список товарів, відсортованих за запасами:");
+        System.out.println("List of products sorted by stock:");
         for (Product product : sortedProducts) {
             System.out.println(product);
         }
     }
     public void filterProductsByStock(int minStock) {
-        System.out.println("Товари з наявністю на складі більше " + minStock + ":");
+        System.out.println("There are more products in stock than" + minStock + ":");
         for (Product product : products.values()) {
             if (product.getStock() > minStock) {
                 System.out.println(product);
