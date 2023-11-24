@@ -14,6 +14,9 @@ public class BankAccount {
     public double getBalance() {
         return balance;
     }
+    public void setBalance(double balance){
+        this.balance = balance;
+    }
 
     public String getAccountSummary() {
         return "Account's name: " + accountName + "\n" + "Account's number: " + accountNumber + "\n"
@@ -39,5 +42,8 @@ public class BankAccount {
 
     public int getAccountNumber() {
         return accountNumber;
+    }
+    public void setAccountName(int accountNumber){
+        this.accountNumber = accountNumber;
     }
 }

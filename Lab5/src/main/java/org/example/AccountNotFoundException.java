@@ -12,4 +12,9 @@ public class AccountNotFoundException extends Exception{
     public string getAccountName() {
         return this.accountName;
     }
+
+    public void setAccountName(String accountName){
+        this.accountName = accountName;
+
+    }
 }

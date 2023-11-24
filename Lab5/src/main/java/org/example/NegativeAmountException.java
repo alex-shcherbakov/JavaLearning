@@ -12,4 +12,8 @@ public class NegativeAmountException extends Exception{
     public double getAmount(){
         return this.amount;
     }
+
+    public void setAmount(double amount){
+        this.amount = amount;
+    }
 }
