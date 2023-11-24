@@ -7,7 +7,7 @@ public class InvalidBookingException extends Exception {
         this.num = num;
     }
     public int getNum(){
-        return num;
+        return this.num;
     }
     public void(int num){
         this.num = num;
