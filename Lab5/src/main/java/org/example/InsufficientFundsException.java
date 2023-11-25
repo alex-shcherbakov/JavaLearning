@@ -16,11 +16,5 @@ public class InsufficientFundsException extends Exception {
         return this.balance;
     }
 
-    public void setWithdrwedAmount(double withdrwedAmount){
-        this.withdrwedAmount = withdrwedAmount;
-    }
-    public void setBalance(double balance){
-        this.balance = balance;
-    }
 
 }

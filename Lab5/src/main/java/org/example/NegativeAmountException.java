@@ -7,13 +7,7 @@ public class NegativeAmountException extends Exception{
                 " You can't deposit a negative sum.");
         this.amount = amount;
     }
-
-
     public double getAmount(){
         return this.amount;
-    }
-
-    public void setAmount(double amount){
-        this.amount = amount;
     }
 }
