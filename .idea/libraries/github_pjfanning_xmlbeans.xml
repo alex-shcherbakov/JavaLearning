@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="github.pjfanning.xmlbeans" type="repository">
+    <properties maven-id="com.github.pjfanning:xmlbeans:2.6.4" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/pjfanning/xmlbeans/2.6.4/xmlbeans-2.6.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
