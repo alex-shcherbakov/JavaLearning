@@ -20,5 +20,4 @@ class DecoderTest {
         assertEquals("hello", Decoder.decodeMessage("h2ll4"));
         assertEquals("world", Decoder.decodeMessage("w4rld"));
     }
-
 }

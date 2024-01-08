@@ -2,7 +2,7 @@ package org.example;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
-public class Decoder {
+class Decoder {
     public static String decodeVowels(String input) {
         return input
                 .replace("1", "a")

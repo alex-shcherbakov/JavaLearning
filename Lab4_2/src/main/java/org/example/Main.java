@@ -1,6 +1,5 @@
 package org.example;
 
-
 public class Main {
     public static void main(String[] args) {
         String encryptedMessage = "t2st3ng uftujoh";
