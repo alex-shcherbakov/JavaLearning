@@ -45,12 +45,10 @@ public class Product {
     }
     @Override
     public String toString() {
-        return "Product{" +
-                "Id=" + id +
-                ", Name = '" + name + '\'' +
-                ", Price = " + price +
-                ", Description = '" + descr + '\'' +
-                ", Category = '" + category + '\'' +
-                '}';
+        return "Id: " + id + "\n" +
+                "Name: " + name + "\n" +
+                "Price: " + price + "\n" +
+                "Description: " + descr + "\n" +
+                "Category: " + category.getCategory();
     }
 }
