@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Cart {
     public List<Product> products;
@@ -19,22 +20,15 @@ public class Cart {
         return products;
     }
     List<Product> searchProductByName(List<Product> products, String name) {
-        List<Product> foundProducts = new ArrayList<>();
-        for (Product product : products) {
-            if (product.getName().equalsIgnoreCase(name)) {
-                foundProducts.add(product);
-            }
-        }
-        return foundProducts;
+        return products.stream()
+                .filter(product -> product.getName().equalsIgnoreCase(name))
+                .collect(Collectors.toList());
+
     }
     List<Product> searchProductByCategory(List<Product> products, String category) {
-        List<Product> foundProducts = new ArrayList<>();
-        for (Product product : products) {
-            if (product.getCategory().getCategory().equalsIgnoreCase(category)) {
-                foundProducts.add(product);
-            }
-        }
-        return foundProducts;
+         return products.stream()
+            .filter(product -> product.getCategory().getCategory().equalsIgnoreCase(category))
+            .collect(Collectors.toList());
     }
     void displaySearchResults(List<Product> products) {
         if (products.isEmpty()) {
